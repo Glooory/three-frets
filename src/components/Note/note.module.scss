@@ -1,0 +1,29 @@
+@import "../../styles/common";
+
+.note {
+  @include matchParent;
+  @include flexColumnCenter;
+
+  span {
+    font-size: 200px;
+    font-weight: bold;
+  }
+
+  .dotHigh {
+    position: relative;
+    bottom: -30px;
+  }
+
+  .dotLow {
+    position: relative;
+    top: -135px;
+  }
+
+  .visible {
+    visibility: visible;
+  }
+
+  .invisible {
+    visibility: hidden;
+  }
+}
