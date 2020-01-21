@@ -1,0 +1,45 @@
+@import "../../styles/common";
+@import "../../styles/colors";
+
+$actionBtnHeight: 48px;
+
+@mixin withBorder {
+  border: 1px solid $gray-300;
+  border-radius: 4px;
+}
+
+.ticker {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 100vw;
+  @include flexRowCenter;
+
+  .delayInput {
+    width: 120px;
+    height: $actionBtnHeight;
+    margin-left: 12px;
+    padding: 0 12px;
+    outline: none;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    @include withBorder;
+
+    :focus {
+      outline: none;
+    }
+  }
+
+  .actionBtn {
+    width: 100px;
+    height: $actionBtnHeight;
+    margin-left: 16px;
+    padding: 0 8px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    @include flexRowCenter;
+    @include withBorder;
+  }
+}
